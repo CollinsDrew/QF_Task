@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap");
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  background-color: whitesmoke;
+  position: relative;
+  width: 100%;
+  font-family: "PT Sans Narrow";
+  font-weight: lighter;
+}
+
+.leftSide {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 40px;
+}
+
+.centre {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin-right: 33%; */
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 10px;
+  margin: 0;
+  padding: 0;
+  /* overflow: hidden; */
+}
+
+li {
+  /* float: left; */
+  margin: 16px;
+}
+
+li p {
+  display: flex;
+  padding: 8px;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+.rightSide {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-right: 50px;
+}
+
+.icons {
+  margin: 0px 15px;
+  font-size: 26px;
+}
+
+.icons:hover {
+  cursor: pointer;
+}
+
+.dropbtn {
+  /* color: white; */
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  font-family: "PT Sans Narrow";
+  font-weight: lighter;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  font-family: "PT Sans Narrow";
+  font-weight: lighter;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: whitesmoke;
+  min-width: 110px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* .dropdown-content a:hover {
+  background-color: #ddd;
+} */
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* .dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+} */
