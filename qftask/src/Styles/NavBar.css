@@ -10,52 +10,19 @@
   font-weight: lighter;
 }
 
+.rightSide {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  margin-right: 50px;
+}
+
 .leftSide {
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-left: 40px;
-}
-
-.centre {
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* margin-right: 33%; */
-}
-
-ul {
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-right: 10px;
-  margin: 0;
-  padding: 0;
-  /* overflow: hidden; */
-}
-
-li {
-  /* float: left; */
-  margin: 16px;
-}
-
-li p {
-  display: flex;
-  padding: 8px;
-}
-
-li:hover {
-  cursor: pointer;
-}
-
-.rightSide {
-  display: flex;
-  justify-content: right;
-  align-items: center;
-  margin-right: 50px;
 }
 
 .icons {
