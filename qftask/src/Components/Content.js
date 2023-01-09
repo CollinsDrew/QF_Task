@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useRef, useState } from "react";
+import ReactDOM from "react-dom";
 
 import "react-slideshow-image/dist/styles.css";
 import "../Styles/Content.css";
 import { Slide } from "react-slideshow-image";
+import Countdown from "react-countdown";
 
 import { BsChevronRight } from "react-icons/bs";
 import { BiHeartCircle } from "react-icons/bi";
@@ -19,6 +21,39 @@ import Creame from "../Images/leather_cream.jpeg";
 function Content() {
   const images = [{ sofa1 }, { sofa2 }, { sofa3 }, { sofa4 }, { sofa5 }];
 
+  const slideRef = useRef();
+
+  const [timeLeft, setTimeLeft] = useState(0);
+
+  const renderer = ({ hours, minutes, seconds, completed }) => {
+    if (completed) {
+      // Render a completed state
+      return "";
+    } else {
+      // Render a countdown
+      return (
+        <span>
+          {hours}:{minutes}:{seconds}
+        </span>
+      );
+    }
+  };
+
+  const millisTillMidnight = () => {
+    let midnight = new Date();
+    midnight.setHours(24);
+    midnight.setMinutes(0);
+    midnight.setSeconds(0);
+    midnight.setMilliseconds(0);
+
+    return midnight.getTime() - new Date().getTime();
+  };
+
+  // ReactDOM.render(
+  //   <Countdown date={Date.now() + 10000} />,
+  //   document.getElementById("countdown")
+  // );
+
   return (
     <div className="mainContainer">
       {/* Left side for image carousel */}
@@ -27,13 +62,19 @@ function Content() {
           Breadcrumb <BsChevronRight /> Breadcrumb
         </p>
         <p className="timer">
-          ORDER IN THE NEXT <span className="countdown">2:55:49</span> FOR NEXT
-          DAY DELIVERY
+          ORDER IN THE NEXT{" "}
+          <span id="countdown">
+            <Countdown
+              date={Date.now() + millisTillMidnight()}
+              renderer={renderer}
+            />
+          </span>{" "}
+          FOR NEXT DAY DELIVERY
         </p>
-        <Slide autoplay={false}>
+        <Slide autoplay={false} ref={slideRef}>
           <div className="each-slide-effect">
             <div style={{ padding: "10px" }}>
-              <img src={sofa1} width="100%"></img>
+              <img src={sofa5} width="100%"></img>
             </div>
           </div>
           <div className="each-slide-effect">
@@ -46,19 +87,36 @@ function Content() {
               <img src={sofa3} width="100%"></img>
             </div>
           </div>
+          <div className="each-slide-effect">
+            <div style={{ padding: "10px" }}>
+              <img src={sofa4} width="100%"></img>
+            </div>
+          </div>
         </Slide>
         <div className="thumbnails">
-          <div className="imageBox">
+          <div
+            className="imageBox"
+            onClick={(event) => slideRef.current.goTo(0)}
+          >
+            <img src={sofa5}></img>
+          </div>
+          <div
+            className="imageBox"
+            onClick={(event) => slideRef.current.goTo(1)}
+          >
             <img src={sofa2}></img>
           </div>
-          <div className="imageBox">
+          <div
+            className="imageBox"
+            onClick={(event) => slideRef.current.goTo(2)}
+          >
             <img src={sofa3}></img>
           </div>
-          <div className="imageBox">
+          <div
+            className="imageBox"
+            onClick={(event) => slideRef.current.goTo(3)}
+          >
             <img src={sofa4}></img>
-          </div>
-          <div className="imageBox">
-            <img src={sofa5}></img>
           </div>
         </div>
       </div>
@@ -88,6 +146,18 @@ function Content() {
               <img src={Creame} />
             </div>
           </div>
+        </div>
+        <div className="size-options">
+          <p className="size-info">Size:</p>
+          <form action="#">
+            {/* <label for="size"></label> */}
+            <select name="sizes" id="size">
+              <option value={0}>2 Seater | 180cm 'W' 80cm 'D' </option>
+              <option value={1}>3 Seater | 240cm 'W' 80cm 'D'</option>
+              <option value={2}>4 Seater | 300cm 'W' 80cm 'D'</option>
+            </select>
+            {/* <input type="submit" value="Submit" /> */}
+          </form>
         </div>
       </div>
     </div>
