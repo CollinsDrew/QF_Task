@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap");
+
+.footerContainer {
+  width: 100%;
+  height: auto;
+  background: white;
+  margin-top: 100px;
+  font-family: "PT Sans Narrow";
+  font-weight: lighter;
+  /* display: flex; */
+}
+
+.foot-head {
+  background: black;
+  color: white;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signUp-title {
+  font-size: 32px;
+  margin-right: 50px;
+}
+
+.signUp-title .signUp {
+  font-size: 26px;
+}
+
+.bottom-section {
+  display: flex;
+}
+
+.logo {
+  width: 75px;
+  height: 75ps;
+  margin-top: 100px;
+  margin-left: 200px;
+}
+
+.lists {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-left: 100px;
+  margin-left: 200px;
+}
+
+.lists ul {
+  list-style-type: none;
+  cursor: pointer;
+}
+
+input[type="email"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+.lists h3,
+.lists p {
+  padding-left: 40px;
+}

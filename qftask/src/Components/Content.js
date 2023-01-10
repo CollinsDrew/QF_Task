@@ -18,12 +18,12 @@ import Tan from "../Images/leather_Tan.jpeg";
 import Black from "../Images/leather_Black.jpeg";
 import Creame from "../Images/leather_cream.jpeg";
 
-function Content() {
-  const images = [{ sofa1 }, { sofa2 }, { sofa3 }, { sofa4 }, { sofa5 }];
+function Content(props) {
+  // const images = [{ sofa1 }, { sofa2 }, { sofa3 }, { sofa4 }, { sofa5 }];
 
   const slideRef = useRef();
 
-  const [timeLeft, setTimeLeft] = useState(0);
+  // const [timeLeft, setTimeLeft] = useState(0);
 
   const renderer = ({ hours, minutes, seconds, completed }) => {
     if (completed) {
@@ -53,6 +53,19 @@ function Content() {
   //   <Countdown date={Date.now() + 10000} />,
   //   document.getElementById("countdown")
   // );
+
+  const [added, setAdded] = useState(false);
+  const buttonClicked = () => {
+    const done = document.querySelector(".done");
+    if (added) {
+      done.style.transform = "translate(-110%) skew(-40deg)";
+      setAdded(false);
+    } else {
+      done.style.transform = "translate(0px)";
+      setAdded(true);
+      props.addToBasket();
+    }
+  };
 
   return (
     <div className="mainContainer">
@@ -151,7 +164,7 @@ function Content() {
           <p className="size-info">Size:</p>
           <form action="#">
             {/* <label for="size"></label> */}
-            <select name="sizes" id="size">
+            <select name="sizes" id="size" className="size-select">
               <option value={0}>2 Seater | 180cm 'W' 80cm 'D' </option>
               <option value={1}>3 Seater | 240cm 'W' 80cm 'D'</option>
               <option value={2}>4 Seater | 300cm 'W' 80cm 'D'</option>
@@ -159,6 +172,17 @@ function Content() {
             {/* <input type="submit" value="Submit" /> */}
           </form>
         </div>
+
+        <div className="size-guide">
+          <p className="size-info-btn">Size Guide</p>
+        </div>
+        <button onClick={buttonClicked} class="addToCart">
+          <div class="pretext">Add To Basket</div>
+
+          <div class="pretext done">
+            <div class="posttext">Done</div>
+          </div>
+        </button>
       </div>
     </div>
   );

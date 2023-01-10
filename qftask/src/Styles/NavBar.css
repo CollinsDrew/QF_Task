@@ -38,11 +38,13 @@
 .dropbtn {
   /* color: white; */
   padding: 16px;
+  padding-left: 50px;
   font-size: 16px;
   border: none;
   font-family: "PT Sans Narrow";
   font-weight: lighter;
   cursor: pointer;
+  background-color: whitesmoke;
 }
 
 .dropdown {
@@ -51,6 +53,11 @@
   font-family: "PT Sans Narrow";
   font-weight: lighter;
   cursor: pointer;
+}
+
+.centre .dropdown .dropbtn i {
+  font-size: 10px;
+  padding-left: 5px;
 }
 
 .dropdown-content {
@@ -69,15 +76,22 @@
   display: block;
 }
 
-/* .dropdown-content a:hover {
+.dropdown-content a:hover {
   background-color: #ddd;
-} */
+}
 
 .dropdown:hover .dropdown-content {
   display: block;
   cursor: pointer;
 }
 
+.cart {
+  position: relative;
+}
+
+.basketBtn {
+  border: none;
+}
 /* .dropdown:hover .dropbtn {
   background-color: #3e8e41;
 } */

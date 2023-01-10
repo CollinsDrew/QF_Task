@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Styles/NavBar.css";
 import { FaUserAlt, FaChevronDown } from "react-icons/fa";
 import { BsCart3, BsChevronDown, BsPersonFill } from "react-icons/bs";
 import { HiShoppingCart } from "react-icons/hi";
+import { Basket } from "./Basket";
 
-function NavBar() {
+function NavBar(props) {
+  const [visible, setVisible] = useState(false);
+
+  const basket = () => {
+    if (visible) {
+      setVisible(false);
+    } else {
+      setVisible(true);
+    }
+  };
+
   return (
     <div className="navContainer">
       {/* Left side of NavBar */}
@@ -13,7 +24,10 @@ function NavBar() {
       <div className="centre">
         <div class="dropdown">
           <button class="dropbtn">
-            Menu Item <FaChevronDown />
+            Menu Item{" "}
+            <i>
+              <FaChevronDown />
+            </i>
           </button>
           <div class="dropdown-content">
             <a href="#">Link 1</a>
@@ -24,7 +38,10 @@ function NavBar() {
 
         <div class="dropdown">
           <button class="dropbtn">
-            Menu Item <FaChevronDown />
+            Menu Item{" "}
+            <i>
+              <FaChevronDown />
+            </i>
           </button>
           <div class="dropdown-content">
             <a href="#">Link 1</a>
@@ -35,7 +52,10 @@ function NavBar() {
 
         <div class="dropdown">
           <button class="dropbtn">
-            Menu Item <FaChevronDown />
+            Menu Item{" "}
+            <i>
+              <FaChevronDown />
+            </i>
           </button>
           <div class="dropdown-content">
             <a href="#">Link 1</a>
@@ -54,9 +74,12 @@ function NavBar() {
           <BsPersonFill />
         </i>
 
-        <i className="icons cart">
-          <HiShoppingCart />
-        </i>
+        <button className="basketBtn" onClick={basket}>
+          <i className="icons cart">
+            <HiShoppingCart />
+            {visible && <Basket sofasInBasket={props.sofasInBasket} />}
+          </i>
+        </button>
       </div>
     </div>
   );
