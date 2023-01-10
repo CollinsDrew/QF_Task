@@ -25,6 +25,9 @@
 .breadcrumb {
   margin-left: 10px;
 }
+.breadcrumb .chevron {
+  font-size: 10px;
+}
 
 .timer {
   margin-left: 10px;

@@ -72,7 +72,7 @@ function Content(props) {
       {/* Left side for image carousel */}
       <div className="imageSlider">
         <p className="breadcrumb">
-          Breadcrumb <BsChevronRight /> Breadcrumb
+          Breadcrumb <BsChevronRight className="chevron" /> Breadcrumb
         </p>
         <p className="timer">
           ORDER IN THE NEXT{" "}
