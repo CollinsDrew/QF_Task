@@ -42,10 +42,10 @@
 
 .lists {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: flex-start;
   padding-left: 100px;
-  margin-left: 200px;
+  margin-left: 50px;
 }
 
 .lists ul {
