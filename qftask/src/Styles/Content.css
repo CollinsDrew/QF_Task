@@ -47,7 +47,7 @@
 .react-slideshow-conatiner {
   max-height: 400px;
   max-width: 340px;
-  margin-left: 150px;
+  margin-left: 300px;
   margin-top: 100px;
 }
 
@@ -195,15 +195,16 @@ select {
   .imageSlider {
     width: 100%;
     height: auto;
+    margin-left: 160px !important;
   }
 
   .each-slide-effect img {
     width: 100%;
   }
 
-  .slide {
+  /* .slide {
     min-width: 300px;
-  }
+  } */
 
   .info {
     display: flex;

@@ -101,6 +101,6 @@
   .navContainer {
     flex-direction: column;
     align-items: center;
-    max-width: 200px !important;
+    max-width: 375px !important;
   }
 }
