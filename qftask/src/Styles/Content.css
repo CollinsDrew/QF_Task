@@ -178,10 +178,11 @@ select {
   background: black;
 }
 
-@media only screen and (max-width: 599px) {
+@media only screen and (max-width: 600px) {
   .mainContainer {
     display: flex;
     flex-direction: column;
+    margin-left: -150px;
   }
 
   .info {
@@ -190,6 +191,5 @@ select {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    margin-left: 150px;
   }
 }
