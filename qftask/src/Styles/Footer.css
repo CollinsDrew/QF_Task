@@ -69,4 +69,12 @@ input[type="email"] {
   .footerContainer {
     width: 100%;
   }
+
+  .bottom-section {
+    flex-direction: column;
+  }
+
+  .lists {
+    flex-direction: column;
+  }
 }

@@ -185,6 +185,11 @@ select {
     margin-left: -150px;
   }
 
+  .imageSlider {
+    display: flex;
+    flex-direction: column;
+  }
+
   .info {
     display: flex;
     flex-direction: column;

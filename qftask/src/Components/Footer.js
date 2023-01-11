@@ -25,7 +25,7 @@ function Footer() {
         </div>
         <div className="lists">
           <div className="qf-commerce">
-            <h3>QF Commerc</h3>
+            <h3>QF Commerce</h3>
             <ul>
               <li>New Releases</li>
               <br></br>
@@ -72,6 +72,7 @@ function Footer() {
               <br></br>
               <li>Address Line</li>
             </ul>
+            <br></br>
             <p>01234 567890</p>
             <br></br>
             <p>hello@qfcommerce.com</p>
