@@ -95,3 +95,19 @@
 /* .dropdown:hover .dropbtn {
   background-color: #3e8e41;
 } */
+
+@media only screen and (max-width: 599px) {
+  .navContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: whitesmoke;
+    position: relative;
+    min-width: 100%;
+    font-family: "PT Sans Narrow";
+    font-weight: lighter;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+}
