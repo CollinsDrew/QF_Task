@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../Styles/NavBar.css";
-import { FaUserAlt, FaChevronDown } from "react-icons/fa";
-import { BsCart3, BsChevronDown, BsPersonFill } from "react-icons/bs";
+import { FaChevronDown } from "react-icons/fa";
+import { BsPersonFill } from "react-icons/bs";
 import { HiShoppingCart } from "react-icons/hi";
 import { Basket } from "./Basket";
 

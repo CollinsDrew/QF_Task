@@ -32,7 +32,7 @@
 .timer {
   margin-left: 10px;
   background-color: whitesmoke;
-  width: 480px;
+  max-width: 375px;
   margin-bottom: 0;
   font-weight: lighter;
   text-align: center;
@@ -43,9 +43,10 @@
   color: red;
 }
 
-.imageSlider {
-  height: 500px;
-  width: 500px;
+.imageSlider,
+.react-slideshow-conatiner {
+  max-height: 400px;
+  max-width: 340px;
   margin-left: 150px;
   margin-top: 100px;
 }
@@ -53,6 +54,8 @@
 .thumbnails {
   display: flex;
   cursor: pointer;
+  flex-wrap: nowrap;
+  max-width: 300px;
 }
 
 .thumbnails img {
@@ -63,6 +66,10 @@
   border: 1px solid black;
   margin: 5px;
   border-radius: 5px;
+}
+
+.info {
+  max-width: 400px;
 }
 
 .info .sofa-title {
@@ -186,15 +193,26 @@ select {
   }
 
   .imageSlider {
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    height: auto;
+  }
+
+  .each-slide-effect img {
+    width: 100%;
+  }
+
+  .slide {
+    min-width: 300px;
   }
 
   .info {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    margin-left: 50px;
+  }
+
+  .thumbnails {
+    margin-left: 26px;
   }
 }

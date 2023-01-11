@@ -84,6 +84,7 @@ function Content(props) {
           </span>{" "}
           FOR NEXT DAY DELIVERY
         </p>
+
         <Slide autoplay={false} ref={slideRef}>
           <div className="each-slide-effect">
             <div style={{ padding: "10px" }}>
@@ -106,6 +107,7 @@ function Content(props) {
             </div>
           </div>
         </Slide>
+
         <div className="thumbnails">
           <div
             className="imageBox"

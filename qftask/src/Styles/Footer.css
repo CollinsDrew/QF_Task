@@ -67,7 +67,7 @@ input[type="email"] {
 
 @media only screen and (max-width: 600px) {
   .footerContainer {
-    width: 100%;
+    max-width: 400px !important;
   }
 
   .bottom-section {
