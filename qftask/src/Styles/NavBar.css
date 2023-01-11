@@ -5,7 +5,7 @@
   justify-content: space-between;
   background-color: whitesmoke;
   position: relative;
-  /* width: 100%; */
+  width: 100%;
   font-family: "PT Sans Narrow";
   font-weight: lighter;
   min-width: 375px;
@@ -101,6 +101,12 @@
   .navContainer {
     flex-direction: column;
     align-items: center;
-    max-width: 375px !important;
+    max-width: 300px !important;
+    overflow: hidden !important;
+  }
+
+  .basketBtn {
+    text-decoration: none;
+    background-color: whitesmoke;
   }
 }
